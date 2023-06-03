@@ -17,6 +17,11 @@ def plot_line(w,b=0,**kwargs):
     return None
 
 
+def dec_bdry_lin_2c_2d(W, linestyle = ':', c = 'k',**kwargs):
+    # decision boundaries of linear classifier with 3 classes in 2 dimensions
+    plot_line(W[:,0] - W[:,1], linestyle = linestyle, c = c,**kwargs)
+    return None
+
 def dec_bdry_lin_3c_2d(W, linestyle = ':', c = 'k',**kwargs):
     # decision boundaries of linear classifier with 3 classes in 2 dimensions
     plot_line(W[:,0] - W[:,1], linestyle = linestyle, c = c,**kwargs)
