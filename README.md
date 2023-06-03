@@ -1,34 +1,20 @@
 # Decision region plotting tools
 
+For plotting decision regions of classifiers. See example below.
 
+## Installation
+
+Navigate to the root directory of this package and run.
 
 
 ```python
+%%capture
 !pip install -e .
 ```
 
-    Defaulting to user installation because normal site-packages is not writeable
-    Obtaining file:///home/yutongw/projects/drplot
-      Preparing metadata (setup.py) ... [?25ldone
-    [?25hRequirement already satisfied: matplotlib in /sw/pkgs/arc/python3.10-anaconda/2023.03/lib/python3.10/site-packages (from drplot==0.1.0) (3.7.0)
-    Requirement already satisfied: numpy in /sw/pkgs/arc/python3.10-anaconda/2023.03/lib/python3.10/site-packages (from drplot==0.1.0) (1.23.5)
-    Requirement already satisfied: contourpy>=1.0.1 in /sw/pkgs/arc/python3.10-anaconda/2023.03/lib/python3.10/site-packages (from matplotlib->drplot==0.1.0) (1.0.5)
-    Requirement already satisfied: cycler>=0.10 in /sw/pkgs/arc/python3.10-anaconda/2023.03/lib/python3.10/site-packages (from matplotlib->drplot==0.1.0) (0.11.0)
-    Requirement already satisfied: fonttools>=4.22.0 in /sw/pkgs/arc/python3.10-anaconda/2023.03/lib/python3.10/site-packages (from matplotlib->drplot==0.1.0) (4.25.0)
-    Requirement already satisfied: kiwisolver>=1.0.1 in /sw/pkgs/arc/python3.10-anaconda/2023.03/lib/python3.10/site-packages (from matplotlib->drplot==0.1.0) (1.4.4)
-    Requirement already satisfied: packaging>=20.0 in /sw/pkgs/arc/python3.10-anaconda/2023.03/lib/python3.10/site-packages (from matplotlib->drplot==0.1.0) (22.0)
-    Requirement already satisfied: pillow>=6.2.0 in /sw/pkgs/arc/python3.10-anaconda/2023.03/lib/python3.10/site-packages (from matplotlib->drplot==0.1.0) (9.4.0)
-    Requirement already satisfied: pyparsing>=2.3.1 in /sw/pkgs/arc/python3.10-anaconda/2023.03/lib/python3.10/site-packages (from matplotlib->drplot==0.1.0) (3.0.9)
-    Requirement already satisfied: python-dateutil>=2.7 in /sw/pkgs/arc/python3.10-anaconda/2023.03/lib/python3.10/site-packages (from matplotlib->drplot==0.1.0) (2.8.2)
-    Requirement already satisfied: six>=1.5 in /sw/pkgs/arc/python3.10-anaconda/2023.03/lib/python3.10/site-packages (from python-dateutil>=2.7->matplotlib->drplot==0.1.0) (1.16.0)
-    Installing collected packages: drplot
-      Attempting uninstall: drplot
-        Found existing installation: drplot 0.1.0
-        Uninstalling drplot-0.1.0:
-          Successfully uninstalled drplot-0.1.0
-      Running setup.py develop for drplot
-    Successfully installed drplot
+## Usage example
 
+Generate an example dataset:
 
 
 ```python
@@ -57,15 +43,17 @@ plt.scatter(X[:,0],X[:,1],c = y)
 
 
 
-    <matplotlib.collections.PathCollection at 0x1529aa00fb50>
+    <matplotlib.collections.PathCollection at 0x1529a9d16ec0>
 
 
 
 
     
-![png](README_files/README_2_1.png)
+![png](README_files/README_4_1.png)
     
 
+
+## Plot the decision regions
 
 
 ```python
@@ -76,6 +64,11 @@ drplt.plot_dec_regi(Wstar)
 
 
     
-![png](README_files/README_3_0.png)
+![png](README_files/README_6_0.png)
     
 
+
+
+```python
+
+```
